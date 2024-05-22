@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    
+</head>
+<body class="grid-register">
+    <header>
+        <div id="logo">
+        <img src="icons8-coronavirus-32.png" alt="">
+        </div>
+
+        <div id="empresa">
+           <h1 class="animate__animated animate__pulse" > Drogueria heald salud</h1>
+        </div>
+
+        <div id="slogan">
+        <h2>Cuidamos <br>tu Bienestar</h2>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html" class="buttons">home</a>
+        <a href="acercade.html" class="buttons">acerca de</a>
+        <a href="contactos.html" class="buttons">contactos</a>
+        <a href="registro.html" class="buttons">registro</a>
+        <a href="sucursales.html" class="buttons">sucursales</a>
+    </nav>
+
+    <main>
+    <div id="Formulario">
+        <h2>Formulario de registro</h2>
+        
+        <form action="" name="formulario" method="get">
+        
+            <legend>Datos personales</legend>
+
+        <label for="nombre">nombre:<span>*</span> </label>
+            <input class="inputts" name="nombre" type="text" placeholder="ingrese su nombre"  ><br>
+       
+
+        <label for="apellido">apellido:<span>*</span> </label>
+            <input class="inputts" name="apellido" type="text" placeholder="ingrese su apellido"  ><br>
+        
+
+        <label for="direccion">direccion:</label>
+            <input class="inputts" name="direccion" type="email" placeholder="direccion"  > <br>
+        
+
+        <label for="ciudad">ciudad:</label>
+            <input class="inputts" name="ciudad" type="text" placeholder="ciudad"  ><br>
+        
+        
+        <label for="cod postal">cod postal:</label>
+            <input class="inputts" name="cod postal" type="text" placeholder="ingrese su cp" ><br>
+        
+
+        <label for="nacimiento">fecha de nacimiento: </label>
+            <input class="inputts" name="nacimiento" type="date"><br>
+       
+        <label for="obra_social">Obra Social</label><br>
+        <select class="inputts" name="obra_social" id="obra_social">
+            <option value="1">union personal</option>
+            <option value="2">galeno</option>
+            <option value="3">Swiss medical</option>
+            <option value="4">otras</option>
+        </select>
+        <br>
+
+        <div class="contenedor-checkbox-radio">
+            <div id="checkbox-radios">
+                <h3>Genero</h3>
+                <ul>
+                    <li><input name="opcion"type="radio" value="1" id="masculino"><label for="masculino">masculino</label></li>
+                    <li><input name="opcion"type="radio" value="1" id="femenino"><label for="femenino">femenino</label></li>
+                    <li><input name="opcion"type="radio" value="1" id="otro"><label for="otro">otro</label></li>
+                </ul>     
+            </div>
+        </div>
+        
+        <div class="contenedor-checkbox-radio">
+            <h3>Patologia</h3>
+            <div id="checkbox-radios">
+                <ul>
+                    <li><input type="checkbox" name="patologia" id="1"><label for="1">HIV</label></li>
+                    <li><input type="checkbox" name="patologia" id="2"><label for="2">Diabetes</label></li>
+                    <li><input type="checkbox" name="patologia" id="3"><label for="3">Cancer</label></li>
+                    <li><input type="checkbox" name="patologia" id="4"><label for="4">Artritis</label></li>
+                    <li><input type="checkbox" name="patologia" id="5"><label for="5">otras</label></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <br>
+
+        <h4>comentarios:</h4>
+        <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+        <br><br>
+
+        <input type="submit" value="submit" id="boton">
+    </form>
+    </div>
+    <script>
+        
+        (function(){
+
+            var formulario = document.getElementsByName('formulario')[0];
+            
+            var validarNombre = function(e){
+                if (formulario.nombre.value == 0){
+                    alert("Completa el campo nombre");
+                    e.preventDefault();
+                    }
+                    else{
+                        if (formulario.nombre.value.length > 50){
+                            alert("Nombre Muy extenso");
+                            e.preventDefault();
+                            }
+                    }
+            };
+
+            var validarApellido = function(e){
+                if (formulario.apellido.value == 0){
+                    alert("Completa el campo Apellido");
+                    e.preventDefault();
+                    }
+                    else{
+                        if (formulario.nombre.value.length > 50){
+                            alert("apellido Muy extenso");
+                            e.preventDefault();
+                            }
+                    }
+            };
+
+            var validarRadio = function(e){
+                if (formulario.opcion[0].checked == true ||
+                    formulario.opcion[1].checked == true ||
+                    formulario.opcion[2].checked == true){
+                }
+                else{
+                    alert("Completa el campo sexo");
+                    e.preventDefault();
+            }
+            };
+
+            var validarCheckbox = function(e){
+                if (formulario.patologia[0].checked == true ||
+                    formulario.patologia[1].checked == true ||
+                    formulario.patologia[2].checked == true ||
+                    formulario.patologia[3].checked == true ||
+                    formulario.patologia[4].checked == true){
+                    }
+                    else{
+                        alert("Selecciona la patologia que padezcas ");
+                        e.preventDefault();
+                    }
+            };
+
+            var validar = function(e){
+                validarNombre(e);
+                validarApellido(e);
+                validarRadio(e);
+                validarCheckbox(e);
+            };
+
+            formulario.addEventListener("submit", validar);
+            
+        }())
+    </script>
+
+    
+    
+    </main>
+
+    <footer>
+        <a href="https://www.facebook.com/"><img src="facebook (1).png" alt=""></a>
+        <a href="https://www.twitter.com/"><img src="gorjeo.png" alt=""></a>
+        <a href="https://www.instagram.com/"><img src="instagram.png" alt=""></a>
+
+        <p>derechos reservados @2020</p>
+    </footer>
+
+</body>
+</html>
+

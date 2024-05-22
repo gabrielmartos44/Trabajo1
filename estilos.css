@@ -1,0 +1,819 @@
+*{/*se formatea la pagina para que no tenga espacios*/
+    box-sizing: border-box;/*para que no haya bordes alrededor de la pagina*/
+    margin: 0;
+}
+
+body{           /*se proporciona tamaño a la letra, el tamaño que tendra la pagina y el padding que tendra el body*/
+    font-size: 1.2rem;
+    background-color: #EBF5FE;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+}
+
+.buttons{           /*se le da estilos a los botones del nav*/
+    background-color:beige;
+    box-shadow: 10px 6px 37px -13px rgba(51,51,51,0.74);
+    text-decoration: none;/*le sacamos a la etiqueta a la ralla de abajo*/
+    border-radius: 10px;
+    padding: 0.4%;
+    margin: 0.3%; 
+    font-size: 1.3vw;
+}
+
+.grid-container{/*maquetado main*/
+    height:210vh;
+    
+    display: grid;
+    gap: 20px;         /*la separacion en pixeles de cada contenedor*/
+    grid-template-columns: 1fr 3fr 1fr;        
+    grid-template-rows: auto 0.2fr 4fr 3fr 0.3fr;                             
+    grid-template-areas: 
+    'header  header  header'
+    'nav   nav   nav'
+    'aside-izquierda main aside-derecha'
+    'aside-abajo aside-abajo aside-abajo'
+    'footer footer footer'
+    ;
+}
+
+.grid-contactos,
+.grid-acercade,
+.grid-branch,
+.grid-register{/*maquetado*/
+    height: 230vh;
+
+    display: grid;
+    gap: 20px;         /*la separacion en pixeles de cada contenedor*/
+    grid-template-columns: 1fr 3fr 1fr;        
+    grid-template-rows: 0.5fr 0.2fr 4fr 3fr 0.5fr; ;                             
+    grid-template-areas: 
+    'header  header  header'
+    'nav   nav   nav'
+    'main main main'
+    'main main main'
+    'footer footer footer'
+    ;
+}
+
+header{
+    grid-area: header;                                             
+    position: relative;
+    background-color: #51d1f6;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: -25px;
+}
+header > .empresa{
+    text-align: center;
+}
+
+nav{
+    grid-area: nav;
+    background-color: #A7EF8D;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+main{
+    grid-area: main;
+    background-color: #51d1f6;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #51d1f6;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    padding: 5px;
+}
+#aside-izquierda,#aside-derecha{
+    text-align: center;
+    padding: 10px;
+}
+
+#aside-izquierda{
+    grid-area: aside-izquierda;
+    background-color: #A7EF8D;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+#aside-derecha{
+    grid-area: aside-derecha;
+    background-color: #A7EF8D;
+    margin-right: 30px;
+    border-radius: 30px;
+    
+}
+#aside-abajo{
+    grid-area: aside-abajo;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: inline-flex;
+
+    /*width: 560px;
+    height:315px;*/
+}
+.imagen_aside{
+    bottom: 0;
+    width: 100%;
+    height: auto;
+}
+#aside-abajo div{
+    width: 50%;
+    text-align: center;
+}
+
+#imagen_main{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+#div_img{
+    width: 100%;
+    height: 100%; 
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+#texto_main{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: center;
+}
+#imagen_intro{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.img-pequeñas{
+    width: 80px;
+    height: auto;
+    margin-top: 150px;
+    /*bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1; /* Para asegurarse de que estén encima de la imagen de fondo */
+}
+#intro{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#texto_main p{
+    font-weight: 800;
+}
+img{
+    width: 32px;
+    height: auto;
+}
+nav,#aside-abajo,#aside-derecha,#aside-izquierda,main{
+    box-shadow: 10px 6px 37px -13px rgba(51,51,51,0.74);
+}
+p{
+    font-size: 1rem;
+    font-weight: normal;
+}
+#texto-abajo{
+    padding: 2rem;
+    padding-top: 0;
+}
+#video-inicio{
+    width: 100%;
+    height: 100%;
+}
+header img{
+    width: 50px;
+    height: 50px;
+}
+#logo{
+    
+    margin-left: auto;
+}
+#slogan{
+    margin-right: auto;
+}
+
+#empresa{
+    text-align: center;
+    flex-grow: 1;
+}
+header h2{
+    font-size: 1rem;
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+
+/*-------------------------------Estilos de el registro----------------------------------------------*/
+
+
+
+
+#boton{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(8, 151, 67);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 4px 20px;
+    margin: 8px 0px;
+    cursor: pointer;
+}
+
+label, input, h3{
+    font-size: 1,2vw;
+}
+
+.inputts{
+    width: 80%;
+    padding: 1vw;
+    margin: 1vw;
+    display: inline-flex;
+    border: 1vw;
+    border-radius: 4px;
+}
+#Formulario{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 2%;
+    margin: 1% 20%;
+    text-align: center;
+}
+
+span{
+    color: red;
+}
+textarea{
+    width: 70%;
+    max-width: 75%;
+    height: 150px;
+    max-height: 200px;
+}
+
+
+.contenedor-checkbox-radio #checkbox-radios ul{/*centrados la lista*/
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-checkbox-radio  #checkbox-radios ul li{/*estilos la lista*/
+    display: inline-block;
+    margin: 0px 5px;
+    align-items: center;
+}
+.contenedor-checkbox-radio  #checkbox-radios ul li label{/*estilos al  label*/
+    display: inline-block;
+    background: #a7bbe4;
+    border: 1px solid #b1b2cf;
+    border-radius: 25px;
+    transition: 0.2s all ease;
+    padding: 8px 12px;
+}
+.contenedor-checkbox-radio  #checkbox-radios ul li label:hover{/*e le da color cuandopase por encima el mouse*/
+    border: 1px solid #686ffd;
+}
+
+.contenedor-checkbox-radio  #checkbox-radios ul li input[type="checkbox"]:checked + label,
+.contenedor-checkbox-radio  #checkbox-radios ul li input[type="radio"]:checked + label{/*se le da estilos al checkbox cuando esten seleccionados*/
+    border: 1px solid #686ffd;
+    background: #686ffd;
+    color: white;
+}
+.contenedor-checkbox-radio  #checkbox-radios ul li input[type="checkbox"],
+.contenedor-checkbox-radio  #checkbox-radios ul li input[type="radio"]{
+    opacity: 0;
+}
+
+
+
+/*----------------------------Estilos de Sucursales----------------------------*/
+/* Estilos base para .imagen-container */
+.imagen-container {
+    max-width: 70%; /* Cambiar el ancho máximo del contenedor */
+    text-align: center;
+    margin: 0 auto; /* Centrar horizontalmente el contenedor */
+}
+
+.imagen-container img {
+    width: 100%; /* Hacer que la imagen ocupe el ancho completo del contenedor */
+    height: auto; /* Mantener la proporción de aspecto */
+}
+
+h3 {
+    text-align: center;
+    margin-top: 0; 
+}
+
+/* Estilos para las sucursales */
+.grid-branch .contenedor-mapa {
+    display: inline-block; /* Mostrar sucursales en línea */
+    text-align: left; /* Alinear el contenido de las sucursales a la izquierda */
+    border: 1px solid #ccc; /* Borde gris alrededor de la sucursal */
+    background-color: #fff; /* Fondo blanco */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 450px; /* Ancho de cada sucursal */
+    margin: 20px; /* Espacio entre las sucursales */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregar sombra gris */
+}
+
+.contenedor-mapa p {
+    margin: 10px 0; /* Espacio arriba y abajo */
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px; /* Mover el elemento hacia abajo */
+    margin-top: 20px; /* Agregar un espacio en la parte superior */
+}
+
+/* Estilos para el mapa dentro de .map */
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para la rejilla de sucursales */
+.grid-branch {
+    width: 100%;
+    text-align: center;
+    overflow: auto;
+}
+
+
+/*.grid-branch main {
+    margin: 8px 0px;
+    
+    text-align: center; /* Centrar el contenido principal */
+
+    /*-------------------------------Estilos Acerca de ----------------------------------------------*/
+
+.imagenfarmacia-container {
+    max-width: 700px; /* Cambiar el ancho máximo del contenedor */
+    text-align: center
+    
+
+}
+.imagenfarmacia-container img {
+    width: 80%; /* Hacer que la imagen ocupe el ancho completo del contenedor */
+    margin-right: 15px;
+    float: left;
+    border: 3px solid #fff
+  
+}
+
+.left-aligned-img {
+    float: left; /* Alinear la imagen a la izquierda */
+    
+}
+.text-box {
+        margin:0;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        font-size: 42px;      
+      
+
+}
+
+.text-box p{
+    font-size: 16px;     
+    line-height: 1.5;
+    margin-bottom: 20px;
+
+}
+
+.text-box h2{
+    font-size: 24px;   
+    font-weight: normal; /* Quitar la negrita */
+
+}
+
+.texto-valores {
+
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+   
+}
+
+.texto-valores p {
+
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+   
+}
+
+.imagenvalores-container{
+
+    text-align: left;
+}
+
+.quienessomos h4 {
+      text-align: center;
+
+}
+
+li{
+    font-size: 1vw;
+}
+
+ /*-------------------------------Estilos Contacto ----------------------------------------------*/
+ .contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contacto h4 {
+    text-align: center;
+    margin-right: 15px; /* Añadimos un margen entre el título y la imagen */
+}
+
+
+
+.text-contactos {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-contactos h2 {
+    font-size: 24px;
+    font-weight: normal; /* Quitar la negrita */
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+.text-contactos p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+  
+}
+
+.text-contactos p i {
+    margin-right: 5px; /* Añadimos un pequeño margen entre el icono y el texto */
+}
+.redes h3 {
+text-align: center;
+margin-top: 20px;
+}
+
+
+.imagen-contactos1 {
+    width:350px;
+    height:250px;
+}
+
+.imagen-contactos2 {
+    width:350px;
+    height:250px;
+  
+}
+
+.imagen-contactos4 {
+    width:350px;
+    height:250px;
+}
+.imagencontactos-container {
+
+    display: flex;
+    justify-content: center;
+}
+
+.comentarios-container h2 {
+
+    font-size: 20px;
+    font-weight: normal; /* Quitar la negrita */
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px; /* Margen inferior de 20px */
+
+}
+
+button[type="submit"] {
+    width: 70%;
+    height: 40px; /* Ajustamos la altura del botón */
+    background-color: rgb(8, 151, 67);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 6px 10px; /* Ajustamos el relleno (padding) */
+    margin: 8px 0px;
+    cursor: pointer;
+    
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(6, 114, 50); /* Cambia el color de fondo al pasar el mouse sobre el botón */
+}
+
+.comentarios-container {
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centramos el contenedor horizontalmente */
+    padding: 20px; /* Añadimos un espacio interior al contenedor */
+    text-align: center; /* Centramos el contenido del contenedor */
+    
+}
+/*
+@media  (max-width: 800px) {
+    .grid-container{
+        height:250vh;        
+        grid-template-columns: 1fr 1fr;        
+        grid-template-rows: auto 4fr 3fr 3fr 3fr 0.3fr;                             
+        grid-template-areas: 
+        'header header'
+        'nav  nav'
+        'aside-izquierda aside-derecha'
+        'main main main'
+        'aside-abajo aside-abajo'
+        'footer footer footer'
+        ;
+    }
+}
+*/
+
+
+@media  (max-width: 986px) {
+    .main-sucursales{
+        height:270vh;
+    }
+}
+
+@media  (max-width: 800px) {
+    .grid-container,.grid-branch{
+        height:400vh;
+    
+        display: grid;
+        gap: 20px;         /*la separacion en pixeles de cada contenedor*/
+        grid-template-columns: 1fr 0.1fr 1fr;        
+        grid-template-rows: auto 0.1fr 1.5fr 1.5fr 3fr 0.3fr;                             
+        grid-template-areas: 
+        'header  header  header'
+        'nav   nav   nav'
+        'main main main'
+        'aside-izquierda none aside-derecha'
+        'aside-abajo aside-abajo aside-abajo'
+        'footer footer footer'
+    ;
+    }
+    #aside-abajo{
+        grid-area: aside-abajo;
+        margin-left: 30px;
+        margin-right: 30px;
+        display: inline-block;
+    }
+    
+    #aside-abajo div{
+        width: 100%;
+        text-align: center;
+    }
+    #video{
+        height: 100%;
+    }
+    #aside-abajo div{
+        height: 50%;
+    }
+    #aside-derecha li{
+        font-size: 2.5vw;
+    }
+    .main-sucursales{
+        height:250vh;
+    }
+}
+
+@media  (max-width: 650px) {
+    .grid-container{
+    height:450vh;
+    grid-template-rows: auto 0.1fr 1.5fr 1.5fr 4fr 0.3fr;   
+    }    
+    
+    .buttons{          
+        font-size: 2vw;
+    }
+
+    header{
+        font-size: 2.5vw;
+    }
+    video_aside{
+        height: 100%;
+        width: 100%;
+    }
+    
+    #video-inicio{
+        width: 100%;
+        height: 80%;
+    }
+
+    #texto-abajo{
+    height: 100%;
+    }
+    
+}
+
+@media  (max-width: 500px) {
+    
+    .grid-container{
+    grid-template-rows: auto 0.1fr 2fr 1.5fr 6fr 0.3fr;   
+  
+    } 
+    #video-inicio{
+        width: 100%;
+        height: 60%;
+    }
+   
+}
+
+/*media acercade*/
+@media (max-width: 400px) {
+    .imagenfarmacia-container img {
+        width: 100px;
+        display: block;
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+    .text-box {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        height: 100%; /* Asegura que el cuerpo y el html ocupen toda la altura */
+    }
+
+    .footer {
+        margin-top: auto; /* Empuja el footer hacia el fondo */
+    }
+    .grid-acercade {
+        height: auto; /* Ajusta la altura según el contenido */
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        grid-template-rows: auto; /* Ajusta la altura de las filas automáticamente */
+        grid-template-areas: 
+            'header'
+            'nav'
+            'main'
+            'footer';
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+    .text-box li{
+        font-size: 16px;     
+        line-height: 1.5;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    #slogan h2 {
+        font-size: 0.5rem; /* Tamaño de fuente por defecto */
+    }
+    .quienessomos h4 {
+        text-align: center;
+        font-size: 1.2rem; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 650px) {
+    footer {
+        grid-area: footer;
+    }
+
+    .grid-acercade {
+        height: auto;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        grid-template-rows: auto; /* Ajusta la altura de las filas automáticamente */
+        grid-template-areas: 
+            'header'
+            'nav'
+            'main'
+            'footer'; /* Cierra el comentario correctamente */
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    .text-box li {
+        font-size: 8px;     
+        line-height: 1.5;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .text-box p {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 8px;
+    }
+
+    .text-box h2 {
+        font-size: 10px;
+    }
+
+    .quienessomos h4 {
+        text-align: center;
+        font-size: 1.2rem; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 850px) {
+    footer {
+        grid-area: footer;
+    }
+
+    .grid-acercade {
+        height: auto;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        grid-template-rows: auto; /* Ajusta la altura de las filas automáticamente */
+        grid-template-areas: 
+            'header'
+            'nav'
+            'main'
+            'footer'; /* Cierra el comentario correctamente */
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    .text-box li {
+        font-size: 10px;     
+        line-height: 1.5;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .text-box p {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 10px;
+    }
+
+    .text-box h2 {
+        font-size: 12px;
+    }
+
+    .quienessomos h4 {
+        text-align: center;
+        font-size: 1.2rem; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    }
+}
